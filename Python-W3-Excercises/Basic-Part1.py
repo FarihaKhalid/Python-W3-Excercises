@@ -3,7 +3,7 @@
 print("Twinkle, twinkle, little star,\n""\t How I wonder what you are!\n""\t\t Up above the world so high,\n"
       "\t\tLike a diamond in the sky.""\nTwinkle, twinkle, little star,\n""\tHow I wonder what you are")
 """
-from PIL.ImageChops import difference
+from sndhdr import tests
 
 """
 #QNO2
@@ -265,5 +265,128 @@ color_list_2 = ["Red", "Green"]
 difference1 = set(color_list_2)^set(color_list_1)
 print(difference1)
 """
+"""
 #QNO30
+def area_of_triangle(base, height):
+    area = 0.5 * ((base) * (height))
+    return area
+result = area_of_triangle(20, 40)
+print(result)
+"""
+"""
+#QNO31
+num = int(input("NO 1: "))
+num1 = int(input("NO 2: "))
+res = min(num,num1)
+GCD = 0
+i = num
+for i in range(num, 0, -1):
+    if (num % i == 0) and (num1 % i == 0):
+        print(i)
+        break
+    else:
+        continue
+"""
+"""
+#QNO32
+num = int(input("NO 1: "))
+num1 = int(input("NO 2: "))
+factor_num = []
+factor_num1 = []
+common_factor = []
+LCM = 0
+HCF = 1
+#Factors of num
+for i in range(2,num+1,1):
+    if num%i == 0:
+        factor_num.append(i)
+
+for i in range(2,num1+1,1):
+    if num1%i == 0:
+        factor_num1.append(i)
+common_factor = list(set(factor_num).intersection(factor_num1))
+if len(common_factor) == 0:
+    LCM = (num * num1)
+else:
+    HCF = max(common_factor)
+    LCM = (num * num1)/HCF
+
+print(LCM)
+"""
+"""
+#QNO 33
+def sum_of_numbers(n1, n2, n3):
+    if n1 == n2 or n2 == n3 or n3 == n1:
+        sum1 = 0
+    else:
+        sum1 = n1 + n2 + n3
+    return sum1
+
+result = sum_of_numbers(1,1,2)
+print(result)
+"""
+"""
+#QNO34
+def sum_of_integers(n1, n2):
+    sum1 = n1 + n2
+    if sum1 in range(15, 21):
+        sum1 = 20
+    return sum1
+result = sum_of_integers(10, 12)
+print(result)
+"""
+"""
+#QNO35
+def complicated(n1, n2):
+    ans = True
+    sum1 = n1 + n2
+    diff = n1 - n2
+    if n1 == n2 or sum1 == 5 or diff == 5:
+        ans = True
+    else:
+        ans = False
+    return ans
+result = complicated(7, 3)
+print(result)
+"""
+"""
+#QNO36
+def add_if_odd(n1, n2):
+    sum1 = 0
+    if type(n1) == int and type(n2) == int:
+        sum1 = n1 + n2
+        return sum1
+    else:
+        return print("Input must be in integers ")
+result = add_if_odd('5',20.23)
+print(result)
+"""
+"""
+#QNO37
+print("Fariha Khalid \n610 Spur Ridge \n31")
+"""
+"""
+#QNO38
+def solution(n1, n2):
+    test_date = (n1 + n2) * (n1 + n2)
+    return test_date
+result = solution(4, 3)
+print(result)
+"""
+"""
+#QNO39
+def future_investment(amt, int_rate, years):
+    future_rate = amt * ((1 + (0.01 * int_rate)) ** years)
+    return future_rate
+result = future_investment(10000, 3.5, 7)
+print(result)
+"""
+"""
+#QNO40
+import math
+list1 = [4, 0]
+list2 = [6, 6]
+distance = math.sqrt((list1[0] - list2[0]) ** 2 + (list1[1] - list2[1]) ** 2)
+print(distance)
+"""
 
