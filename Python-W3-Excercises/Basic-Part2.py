@@ -15,18 +15,6 @@ def distinguishing(list1):
 result = distinguishing([5, 4, 5, 7, 9])
 print(result)
 """
-import math
-import os
-import sys
-from enum import unique
-from importlib.util import resolve_name
-from re import match
-from symbol import power, return_stmt
-from sys import platform, modules
-
-from PIL.ImImagePlugin import number
-from PIL.ImageChops import difference, multiply
-from jinja2.utils import missing
 
 """
 #QNO2
@@ -411,12 +399,52 @@ elif not arithmetic_progression:
 if arithmetic_progression != True and Geometric_progression != True:
     print("Wrong Sequence")
 """
+"""
 #QNO28
 third_term = int(input("Input third term of the series:"))
 third_term_last = int(input("Input 3rd last term:"))
-sum_ofthesseries = 0
-Length_of_the_series = 0
+sum_ofseries = 0
+#Length_of_the_series = 0
+series = []
+for i in range(1, third_term+1):
+    series.append(i)
+    sum_ofseries = sum_ofseries + i
+for k in range(third_term+1, third_term_last+3):
+    series.append(k)
+    sum_ofseries = sum_ofseries + k
 
+print(series)
+print(sum_ofseries)
+"""
+"""
+#QNO29
+pair = (input("Numbers: "))
+pair_list = pair.split(",")
+pair_list = [int(i) for i in pair_list]
+max_no = max(pair_list)
+result = 0
+for i in range(2, max_no+1):
+    if pair_list[0]/i == 0 and pair_list[1]/i == 0:
+        result = i
+        print(result)
+    else:
+        print("True")
+"""
+"""
+@QNO 30
+n = 1234
+isPalindrome = False
+result = 0
+k = str(n)
+n2 = [s for s in reversed(k)]
+n3 = "".join(n2)
+result = int(n) + int(n3)
+result1 = str(result)
+if result1 == result1[::-1]:
+    isPalindrome = True
+    print("Is Palindrome")
+print(result1)
+"""
 
 
 
